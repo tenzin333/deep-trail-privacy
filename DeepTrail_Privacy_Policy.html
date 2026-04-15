@@ -1,262 +1,353 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DeepTrail — Privacy Policy</title>
-    <style>
-        :root { --text: #1a1a1a; --muted: #555; --accent: #2563eb; --border: #e0e0e0; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #fafafa; color: var(--text); line-height: 1.7; padding: 2rem 1rem; }
-        .container { max-width: 720px; margin: 0 auto; }
-        h1 { font-size: 2rem; font-weight: 700; margin-bottom: 0.25rem; }
-        .subtitle { color: var(--muted); font-size: 0.95rem; margin-bottom: 2rem; }
-        h2 { font-size: 1.25rem; font-weight: 600; margin-top: 2.5rem; margin-bottom: 0.75rem; padding-bottom: 0.4rem; border-bottom: 2px solid var(--accent); display: inline-block; }
-        p, li { margin-bottom: 0.75rem; color: #2a2a2a; }
-        ul { padding-left: 1.5rem; margin-bottom: 1rem; }
-        li { margin-bottom: 0.4rem; }
-        .section { margin-bottom: 1.5rem; }
-        a { color: var(--accent); text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .effective { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.9rem; }
-        .toc { background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem 1.5rem; margin-bottom: 2rem; }
-        .toc-title { font-weight: 600; margin-bottom: 0.5rem; }
-        .toc ol { padding-left: 1.25rem; margin-bottom: 0; }
-        .toc li { margin-bottom: 0.3rem; font-size: 0.95rem; }
-        .summary { background: #f0f7ff; border-left: 4px solid var(--accent); padding: 1rem 1.25rem; margin-bottom: 2rem; border-radius: 0 6px 6px 0; }
-        .summary strong { display: block; margin-bottom: 0.4rem; }
-        table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }
-        th, td { text-align: left; padding: 0.6rem 0.75rem; border: 1px solid var(--border); }
-        th { background: #f5f5f5; font-weight: 600; }
-        code { background: #eee; padding: 0.15rem 0.4rem; border-radius: 3px; font-size: 0.9em; }
-    </style>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>DeepTrail — Privacy Policy</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 16px;
+    color: #1a1a2e;
+    background: #fafafa;
+    line-height: 1.7;
+  }
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+  }
+  h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .subtitle {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 32px;
+  }
+  h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 36px;
+    margin-bottom: 12px;
+    color: #1a1a2e;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 6px;
+  }
+  h3 {
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  p { margin-bottom: 14px; }
+  ul {
+    padding-left: 24px;
+    margin-bottom: 14px;
+  }
+  ul li { margin-bottom: 6px; }
+  .highlight {
+    background: #eef4ff;
+    border-left: 3px solid #3b82f6;
+    padding: 16px 20px;
+    margin: 20px 0;
+    border-radius: 0 8px 8px 0;
+    font-size: 15px;
+  }
+  .highlight-green {
+    background: #f0fdf4;
+    border-left: 3px solid #22c55e;
+    padding: 16px 20px;
+    margin: 20px 0;
+    border-radius: 0 8px 8px 0;
+    font-size: 15px;
+  }
+  .contact-box {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 24px;
+  }
+  a { color: #3b82f6; }
+  code {
+    background: #f1f5f9;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: 'SF Mono', 'Fira Code', monospace;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 15px;
+  }
+  th, td {
+    text-align: left;
+    padding: 10px 12px;
+    border: 1px solid #e5e7eb;
+  }
+  th {
+    background: #f8fafc;
+    font-weight: 600;
+  }
+</style>
 </head>
 <body>
-    <div class="container">
-        <h1>DeepTrail &mdash; Privacy Policy</h1>
-        <p class="subtitle">Chrome Extension ID: <code>gbfhehbnondmcbjfbakjopooknchcglg</code> &nbsp;|&nbsp; Last updated: April 12, 2026</p>
+<div class="container">
 
-        <div class="summary">
-            <strong>The short version:</strong>
-            DeepTrail processes web page content you explicitly choose to save to build your personal knowledge graph. Your data is sent to our backend server for AI processing (embedding and summarization). We share data only with the third-party services listed in Section 5 &mdash; solely to provide DeepTrail's functionality. We do not sell, share, or use your data for advertising. You can delete your data at any time.
-        </div>
+<h1>DeepTrail — Privacy Policy</h1>
+<p class="subtitle">Effective date: April 15, 2026 &nbsp;|&nbsp; Last updated: April 15, 2026</p>
 
-        <div class="toc">
-            <div class="toc-title">Contents</div>
-            <ol>
-                <li><a href="#intro">Introduction</a></li>
-                <li><a href="#collection">Data We Collect</a></li>
-                <li><a href="#not-collected">Data We Do NOT Collect</a></li>
-                <li><a href="#use">How We Use Your Data</a></li>
-                <li><a href="#handling">How We Handle Your Data</a></li>
-                <li><a href="#sharing">Third-Party Data Sharing</a></li>
-                <li><a href="#permissions">Chrome Extension Permissions</a></li>
-                <li><a href="#storage">Data Storage &amp; Security</a></li>
-                <li><a href="#retention">Data Retention &amp; Deletion</a></li>
-                <li><a href="#disclosures">In-Product Disclosures</a></li>
-                <li><a href="#limited-use">Chrome Web Store Limited Use Compliance</a></li>
-                <li><a href="#rights">Your Rights</a></li>
-                <li><a href="#children">Children's Privacy</a></li>
-                <li><a href="#changes">Changes to This Policy</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ol>
-        </div>
+<div class="highlight">
+  <strong>Summary:</strong> DeepTrail is a Chrome extension that helps you build a personal knowledge graph from web pages you choose to save. Your page content is sent to our backend server for AI processing (embedding and summarization), stored in our database, and never sold, shared for advertising, or used for any purpose beyond providing DeepTrail's core functionality. You can view, delete, or request export of your data at any time.
+</div>
 
-        <!-- 1 -->
-        <div class="section" id="intro">
-            <h2>1. Introduction</h2>
-            <p>DeepTrail ("we", "our", or "the extension") is a Chrome browser extension that helps users build a personal knowledge graph from web pages they choose to save. This privacy policy explains what data we collect, how we handle, store, and share it, and how we protect it.</p>
-            <p>DeepTrail handles personal and sensitive user data as defined by the <a href="https://developer.chrome.com/docs/webstore/program-policies/policies" target="_blank" rel="noopener">Chrome Web Store Developer Program Policies</a>. We are committed to protecting your privacy and being transparent about our data practices.</p>
-        </div>
+<h2>1. Who We Are</h2>
+<p><strong>Developer:</strong> Tenzin Thinlay Bhutia (individual developer)<br/>
+<strong>Extension name:</strong> DeepTrail<br/>
+<strong>Contact email:</strong> <a href="mailto:tenthinlayofficial@gmail.com">tenthinlayofficial@gmail.com</a><br/>
+<strong>Location:</strong> Kalimpong, West Bengal, India</p>
+<p>This privacy policy applies to the DeepTrail Chrome extension (Item ID: <code>gbfhehbnondmcbjfbakjopooknchcglg</code>) and the associated backend services. If you have any questions about this policy or your data, contact us at the email above.</p>
 
-        <!-- 2 -->
-        <div class="section" id="collection">
-            <h2>2. Data We Collect</h2>
-            <p>When you use DeepTrail, we collect the following data:</p>
-            <ul>
-                <li><strong>Web page content:</strong> Text content extracted from web pages you explicitly choose to save to your knowledge graph (via the "Save" button in the side panel or the keyboard shortcut). This is used to generate embeddings and summaries. We do not collect content from pages you do not save.</li>
-                <li><strong>Page metadata:</strong> The URL, page title, and timestamp of saved pages. This is used for node identification, deduplication, and display in the knowledge graph.</li>
-                <li><strong>Authentication data:</strong> If you create an account, we store your email address and an authentication token to identify your account and secure your data.</li>
-                <li><strong>Search queries:</strong> Queries you type into DeepTrail's search interface are sent to our backend to perform semantic search across your knowledge graph.</li>
-            </ul>
-        </div>
+<h2>2. What Data We Collect</h2>
+<p>DeepTrail collects data only when you actively use the extension to save a page or perform a search. We categorize collected data as follows:</p>
 
-        <!-- 3 -->
-        <div class="section" id="not-collected">
-            <h2>3. Data We Do NOT Collect</h2>
-            <ul>
-                <li>We do <strong>not</strong> collect your general browsing history. We only process pages you explicitly save.</li>
-                <li>We do <strong>not</strong> collect passwords, form data, financial information, or health information.</li>
-                <li>We do <strong>not</strong> track your activity across websites.</li>
-                <li>We do <strong>not</strong> collect data when the extension is inactive.</li>
-                <li>We do <strong>not</strong> collect any data in the background or without user action.</li>
-            </ul>
-        </div>
+<h3>2a. Data collected when you save a page</h3>
+<ul>
+  <li><strong>Web page content (text):</strong> The text content extracted from web pages you explicitly choose to save to your knowledge graph. This is classified as "website content" under Chrome Web Store data types.</li>
+  <li><strong>Page metadata:</strong> The URL, page title, and timestamp of each saved page. Used for node identification, deduplication, and display.</li>
+</ul>
 
-        <!-- 4 -->
-        <div class="section" id="use">
-            <h2>4. How We Use Your Data</h2>
-            <p>Your data is used exclusively to provide DeepTrail's core functionality:</p>
-            <ul>
-                <li><strong>Embedding generation:</strong> Page content is sent to the Google Gemini API to generate semantic embeddings (numerical representations) that enable similarity search in your knowledge graph.</li>
-                <li><strong>Summarization:</strong> Page content is sent to the Groq API to generate summaries displayed in your knowledge graph nodes.</li>
-                <li><strong>Semantic search:</strong> Your search queries are embedded and compared against your stored knowledge graph to find relevant nodes.</li>
-                <li><strong>Knowledge graph storage:</strong> Your nodes, edges, and embeddings are stored in our PostgreSQL database to persist your knowledge graph across sessions.</li>
-            </ul>
-            <p>We do <strong>not</strong> use your data for any other purpose, including training AI models, analytics, profiling, advertising, or any purpose unrelated to providing DeepTrail's knowledge graph functionality.</p>
-        </div>
+<h3>2b. Data collected when you search</h3>
+<ul>
+  <li><strong>Search queries:</strong> Text queries you type into DeepTrail's search bar are sent to our backend to perform semantic search across your knowledge graph.</li>
+</ul>
 
-        <!-- 5 -->
-        <div class="section" id="handling">
-            <h2>5. How We Handle Your Data</h2>
-            <p>This section describes how your data is handled at each stage of processing:</p>
-            <ul>
-                <li><strong>In transit:</strong> All data transmitted between the extension and our backend, and between our backend and third-party APIs, is encrypted using HTTPS/TLS.</li>
-                <li><strong>During processing:</strong> Page content is sent to third-party APIs (Gemini, Groq) in real time for embedding generation and summarization. We do not cache, log, or retain the raw content sent to these APIs beyond what is needed to complete the request. Once the embedding or summary is returned, the raw content is not stored on our backend.</li>
-                <li><strong>At rest:</strong> Processed data (embeddings, summaries, metadata) is stored in our PostgreSQL database hosted on Neon.tech. Each user's data is logically isolated &mdash; you cannot access another user's knowledge graph.</li>
-                <li><strong>No secondary use:</strong> Your data is never used for purposes beyond providing DeepTrail's core knowledge graph features.</li>
-            </ul>
-        </div>
+<h3>2c. Data collected for authentication</h3>
+<ul>
+  <li><strong>Email address:</strong> If you create an account, we store your email address to identify your account.</li>
+  <li><strong>Authentication token:</strong> A session token stored locally via Chrome's <code>chrome.storage</code> API to keep you signed in.</li>
+</ul>
 
-        <!-- 6 -->
-        <div class="section" id="sharing">
-            <h2>6. Third-Party Data Sharing</h2>
-            <p><strong>We share user data with the following parties and no others:</strong></p>
-            <table>
-                <thead>
-                    <tr><th>Service</th><th>Purpose</th><th>Data Shared</th><th>Retention by Third Party</th></tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Google Gemini API</strong></td>
-                        <td>Generate text embeddings</td>
-                        <td>Page content text</td>
-                        <td>Refer to <a href="https://ai.google.dev/terms" target="_blank" rel="noopener">Gemini API Terms</a></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Groq API</strong></td>
-                        <td>LLM-powered summarization and query responses</td>
-                        <td>Page content, search queries</td>
-                        <td>Refer to <a href="https://groq.com/terms-of-use/" target="_blank" rel="noopener">Groq Terms</a></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Neon.tech</strong></td>
-                        <td>PostgreSQL database hosting</td>
-                        <td>Nodes, embeddings, metadata, account info</td>
-                        <td>Refer to <a href="https://neon.tech/privacy" target="_blank" rel="noopener">Neon Privacy Policy</a></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Render</strong></td>
-                        <td>Backend API hosting</td>
-                        <td>All API requests transit through Render's infrastructure</td>
-                        <td>Refer to <a href="https://render.com/privacy" target="_blank" rel="noopener">Render Privacy Policy</a></td>
-                    </tr>
-                </tbody>
-            </table>
-            <p>We do <strong>not</strong> sell, rent, or share your data with any other third parties. We do not share data with advertisers, data brokers, or information resellers. Data is sent to the services listed above solely to provide DeepTrail's functionality.</p>
-            <p>We do not control the data retention or privacy practices of these third-party services. We encourage you to review their respective privacy policies linked above.</p>
-            <p>We may also disclose data if required to do so by law or in response to valid legal process (e.g., a court order or subpoena).</p>
-        </div>
+<h3>2d. Data stored locally on your device</h3>
+<ul>
+  <li><strong>Authentication token:</strong> Stored in <code>chrome.storage.local</code>.</li>
+  <li><strong>Extension settings/preferences:</strong> Any user preferences are stored locally via <code>chrome.storage</code>.</li>
+</ul>
 
-        <!-- 7 -->
-        <div class="section" id="permissions">
-            <h2>7. Chrome Extension Permissions</h2>
-            <p>DeepTrail requests the following browser permissions, each of which is necessary for the extension's core functionality:</p>
-            <ul>
-                <li><strong><code>activeTab</code>:</strong> Required to read the URL and title of the current web page when you explicitly choose to save it to your knowledge graph. This permission is only activated when you interact with the extension &mdash; it does not allow background access to your tabs or browsing activity.</li>
-                <li><strong><code>sidePanel</code>:</strong> Required to display DeepTrail's knowledge graph interface in Chrome's side panel.</li>
-                <li><strong><code>storage</code>:</strong> Required to store your authentication token and extension settings locally in your browser using Chrome's <code>chrome.storage</code> API.</li>
-            </ul>
-            <p>DeepTrail does not request or use broad permissions such as <code>tabs</code>, <code>webNavigation</code>, <code>history</code>, or <code>browsingData</code>. We only request the minimum permissions necessary to provide the extension's functionality.</p>
-        </div>
+<h2>3. What Data We Do NOT Collect</h2>
+<ul>
+  <li>We do <strong>not</strong> collect your general browsing history. We only process pages you explicitly save.</li>
+  <li>We do <strong>not</strong> collect passwords, form data, financial information, or health information.</li>
+  <li>We do <strong>not</strong> track your activity across websites.</li>
+  <li>We do <strong>not</strong> collect data when the extension is inactive or when you are not actively using a DeepTrail feature.</li>
+  <li>We do <strong>not</strong> collect personally identifiable information beyond your email address (if you create an account).</li>
+  <li>We do <strong>not</strong> collect your IP address for tracking purposes (though our hosting provider may log IP addresses in standard server logs as described in Section 6).</li>
+  <li>We do <strong>not</strong> use cookies or any browser-based tracking technologies.</li>
+  <li>We do <strong>not</strong> run any analytics or telemetry services.</li>
+</ul>
 
-        <!-- 8 -->
-        <div class="section" id="storage">
-            <h2>8. Data Storage &amp; Security</h2>
-            <ul>
-                <li>Your knowledge graph data is stored in a PostgreSQL database hosted on <a href="https://neon.tech" target="_blank" rel="noopener">Neon.tech</a>.</li>
-                <li>All data transmission between the extension and our backend uses HTTPS encryption.</li>
-                <li>All data transmission between our backend and third-party APIs (Gemini, Groq) uses HTTPS encryption.</li>
-                <li>Passwords are hashed before storage; we never store plaintext passwords.</li>
-                <li>Authentication tokens are stored securely using Chrome's <code>chrome.storage</code> API on your local device.</li>
-                <li>Each user's data is logically isolated &mdash; you cannot access another user's knowledge graph.</li>
-                <li>Database access is restricted to the application server via authenticated, encrypted connections.</li>
-                <li>We do not store raw page content on our backend after processing is complete. Only embeddings, summaries, and metadata are persisted.</li>
-            </ul>
-            <p>No method of transmission or storage is 100% secure. While we strive to use commercially acceptable means to protect your data, we cannot guarantee absolute security.</p>
-        </div>
+<h2>4. How We Use Your Data</h2>
+<p>Your data is used <strong>exclusively</strong> to provide DeepTrail's core functionality — building and querying your personal knowledge graph. Specifically:</p>
 
-        <!-- 9 -->
-        <div class="section" id="retention">
-            <h2>9. Data Retention &amp; Deletion</h2>
-            <ul>
-                <li>Your data is retained as long as you have an active DeepTrail account.</li>
-                <li>You can delete individual nodes from your knowledge graph at any time through the extension UI.</li>
-                <li>You can delete all nodes at once using the "Clear All" option in the extension UI.</li>
-                <li>You can request complete deletion of all your data (including your account) by contacting us at the email address below. We will delete all your data within 30 days of receiving your request.</li>
-                <li>If you uninstall the extension, your data remains on our server until you request deletion. This is so you can reinstall and recover your knowledge graph if desired.</li>
-            </ul>
-        </div>
+<table>
+  <tr>
+    <th>Data type</th>
+    <th>Purpose</th>
+    <th>Processing location</th>
+  </tr>
+  <tr>
+    <td>Web page content</td>
+    <td>Generate semantic embeddings for similarity search; generate summaries for knowledge graph nodes</td>
+    <td>Sent to Gemini API (embeddings) and Groq API (summarization), then stored on our database</td>
+  </tr>
+  <tr>
+    <td>Page metadata (URL, title)</td>
+    <td>Node identification, deduplication, display in knowledge graph</td>
+    <td>Stored on our database</td>
+  </tr>
+  <tr>
+    <td>Search queries</td>
+    <td>Semantic search across your knowledge graph</td>
+    <td>Sent to Gemini API (query embedding), compared against stored embeddings on our database</td>
+  </tr>
+  <tr>
+    <td>Email address</td>
+    <td>Account identification and authentication</td>
+    <td>Stored on our database</td>
+  </tr>
+  <tr>
+    <td>Authentication token</td>
+    <td>Keep you signed in across sessions</td>
+    <td>Stored locally on your device via chrome.storage</td>
+  </tr>
+</table>
 
-        <!-- 10 -->
-        <div class="section" id="disclosures">
-            <h2>10. In-Product Disclosures</h2>
-            <ul>
-                <li>The extension's Chrome Web Store listing clearly describes DeepTrail's data collection and usage practices.</li>
-                <li>DeepTrail only processes page content when you explicitly trigger the save action (via the "Save" button or keyboard shortcut) &mdash; no data is collected passively or in the background.</li>
-                <li>Delete actions (individual node deletion and "Clear All") are available directly in the extension UI, giving you immediate control over your stored data.</li>
-            </ul>
-        </div>
+<p>We do not use your data for any other purpose, including advertising, profiling, analytics, marketing, or training AI models.</p>
 
-        <!-- 11 -->
-        <div class="section" id="limited-use">
-            <h2>11. Chrome Web Store Limited Use Compliance</h2>
-            <p>DeepTrail's use of information received from Google APIs adheres to the <a href="https://developer.chrome.com/docs/webstore/program-policies/limited-use" target="_blank" rel="noopener">Chrome Web Store User Data Policy</a>, including the Limited Use requirements.</p>
-            <p>Specifically:</p>
-            <ul>
-                <li>We limit data use to providing and improving DeepTrail's single purpose: building a personal research knowledge graph.</li>
-                <li>We do not transfer user data to third parties except as described in Section 6, which is necessary to provide DeepTrail's core functionality.</li>
-                <li>We do not use or transfer user data for personalized advertisements.</li>
-                <li>We do not sell user data to data brokers or information resellers.</li>
-                <li>We do not use or transfer user data to determine creditworthiness or for lending purposes.</li>
-            </ul>
-        </div>
+<h2>5. Third-Party Services and Data Sharing</h2>
+<p>DeepTrail shares data with the following third-party services, solely to provide the extension's core functionality:</p>
 
-        <!-- 12 -->
-        <div class="section" id="rights">
-            <h2>12. Your Rights</h2>
-            <p>You have the right to:</p>
-            <ul>
-                <li><strong>Access</strong> your data &mdash; your entire knowledge graph is visible in the extension UI.</li>
-                <li><strong>Delete</strong> your data &mdash; delete individual nodes via the UI, clear all data at once, or request full account deletion by email.</li>
-                <li><strong>Export</strong> your data &mdash; (planned feature) export your knowledge graph data.</li>
-                <li><strong>Opt out</strong> &mdash; you can stop using DeepTrail and uninstall the extension at any time. No data is collected after uninstallation.</li>
-            </ul>
-        </div>
+<table>
+  <tr>
+    <th>Service</th>
+    <th>What data is shared</th>
+    <th>Why</th>
+    <th>Their privacy policy</th>
+  </tr>
+  <tr>
+    <td><strong>Google Gemini API</strong></td>
+    <td>Page content text, search query text</td>
+    <td>Generate semantic embeddings (numerical vectors)</td>
+    <td><a href="https://ai.google.dev/terms" target="_blank">Gemini API Terms</a></td>
+  </tr>
+  <tr>
+    <td><strong>Groq API</strong></td>
+    <td>Page content text, search queries</td>
+    <td>LLM-powered summarization and RAG query responses</td>
+    <td><a href="https://groq.com/terms-of-use/" target="_blank">Groq Terms of Use</a></td>
+  </tr>
+  <tr>
+    <td><strong>Neon.tech</strong></td>
+    <td>All stored data (nodes, embeddings, metadata, account info)</td>
+    <td>PostgreSQL database hosting</td>
+    <td><a href="https://neon.tech/privacy" target="_blank">Neon Privacy Policy</a></td>
+  </tr>
+  <tr>
+    <td><strong>Render</strong></td>
+    <td>All API requests transit through Render infrastructure</td>
+    <td>Backend API hosting</td>
+    <td><a href="https://render.com/privacy" target="_blank">Render Privacy Policy</a></td>
+  </tr>
+</table>
 
-        <!-- 13 -->
-        <div class="section" id="children">
-            <h2>13. Children's Privacy</h2>
-            <p>DeepTrail is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13. If we become aware that we have collected such data, we will take steps to delete it promptly.</p>
-        </div>
+<p>We do <strong>not</strong> sell, rent, or share your data with any other third parties. Data is sent to the services listed above solely to provide DeepTrail's functionality. We do not share data with advertising networks, data brokers, or analytics providers.</p>
 
-        <!-- 14 -->
-        <div class="section" id="changes">
-            <h2>14. Changes to This Policy</h2>
-            <p>We may update this privacy policy from time to time. Changes will be communicated through the Chrome Web Store listing and/or within the extension. Continued use of DeepTrail after changes constitutes acceptance of the updated policy.</p>
-        </div>
+<h2>6. Data Storage, Retention, and Security</h2>
 
-        <!-- 15 -->
-        <div class="section" id="contact">
-            <h2>15. Contact</h2>
-            <p>If you have questions about this privacy policy or want to request data deletion, contact us:</p>
-            <p><strong>Email:</strong> <a href="mailto:tenthinlayofficial@gmail.com">tenthinlayofficial@gmail.com</a></p>
-            <p><strong>Developer:</strong> Tenzin</p>
-        </div>
+<h3>6a. Where your data is stored</h3>
+<ul>
+  <li><strong>Server-side:</strong> Your knowledge graph data (nodes, edges, embeddings, metadata, account info) is stored in a PostgreSQL database hosted on <a href="https://neon.tech" target="_blank">Neon.tech</a> (cloud infrastructure). Our backend API runs on <a href="https://render.com" target="_blank">Render</a>.</li>
+  <li><strong>Client-side (your device):</strong> Authentication tokens and extension settings are stored locally via Chrome's <code>chrome.storage</code> API.</li>
+</ul>
 
-        <div class="effective">
-            <p>Effective date: April 12, 2026</p>
-        </div>
-    </div>
+<h3>6b. How long we keep your data</h3>
+<ul>
+  <li>Your data is retained for as long as you have an active DeepTrail account.</li>
+  <li>If you request deletion, all your data will be permanently removed from our servers within 30 days.</li>
+  <li>If you uninstall the extension, your server-side data is retained so you can reinstall and recover your knowledge graph. To delete server-side data, you must explicitly request deletion (see Section 8).</li>
+  <li>Locally stored data (authentication tokens, preferences) is removed automatically when you uninstall the extension.</li>
+  <li>Standard server logs (which may include IP addresses) generated by our hosting provider are retained per their default retention policies and are not used by us for any purpose.</li>
+</ul>
+
+<h3>6c. How we protect your data</h3>
+<ul>
+  <li>All data transmission between the extension and our backend uses <strong>HTTPS/TLS encryption</strong>.</li>
+  <li>All data transmission between our backend and third-party APIs (Gemini, Groq) uses <strong>HTTPS/TLS encryption</strong>.</li>
+  <li>Authentication tokens are stored securely using Chrome's <code>chrome.storage</code> API.</li>
+  <li>Each user's data is isolated — you cannot access another user's knowledge graph.</li>
+  <li>Database access is restricted to authenticated API requests only.</li>
+</ul>
+
+<h2>7. Permissions Justification</h2>
+<p>DeepTrail requests the following Chrome extension permissions. Each is required for the extension's core functionality:</p>
+
+<table>
+  <tr>
+    <th>Permission</th>
+    <th>Why it's needed</th>
+    <th>What data is accessed</th>
+  </tr>
+  <tr>
+    <td><code>activeTab</code></td>
+    <td>Access the content of the currently active tab when you click "Save" to add it to your knowledge graph</td>
+    <td>Text content and URL of the active tab, only when you trigger the save action</td>
+  </tr>
+  <tr>
+    <td><code>tabs</code></td>
+    <td>Access the URL and title of the current tab to capture page metadata (source URL, page title) for knowledge graph nodes</td>
+    <td>URL and title of tabs — used only when saving a page to your knowledge graph</td>
+  </tr>
+  <tr>
+    <td><code>storage</code></td>
+    <td>Store your authentication token and extension preferences locally on your device</td>
+    <td>Auth token and user settings — no sensitive data beyond what's needed to keep you signed in</td>
+  </tr>
+  <tr>
+    <td><code>sidePanel</code></td>
+    <td>Display DeepTrail's knowledge graph UI in Chrome's side panel</td>
+    <td>No data is accessed through this permission — it only enables the side panel UI</td>
+  </tr>
+  <tr>
+    <td><code>alarms</code></td>
+    <td>Schedule periodic background tasks such as token refresh or deferred processing. This permission does not access any user data — it only triggers timed events within the extension's service worker.</td>
+    <td>No user data is accessed through this permission</td>
+  </tr>
+</table>
+
+<h3>Host Permissions</h3>
+<p>DeepTrail declares a <code>host_permissions</code> entry in its manifest for <code>https://deep-trial.onrender.com/*</code> — our backend API server hosted on Render. This permission is required so the extension can send saved page content to the backend for processing, receive knowledge graph data, and perform search queries. This is the only external domain the extension communicates with directly. All communication uses HTTPS.</p>
+
+<h3>Remote Code</h3>
+<p>DeepTrail does <strong>not</strong> use remote code. All extension code is bundled locally with the extension package. No scripts are loaded from external servers at runtime.</p>
+
+<p>We follow the principle of minimal permissions — DeepTrail only requests the permissions strictly necessary for its functionality. We do not request broad permissions like <code>&lt;all_urls&gt;</code>, <code>history</code>, <code>cookies</code>, or <code>webRequest</code>.</p>
+
+<h2>8. Your Rights and Controls</h2>
+<p>You have the following rights regarding your data:</p>
+<ul>
+  <li><strong>Access:</strong> Your entire knowledge graph is visible in the extension's side panel UI. You can see all nodes, connections, and metadata at any time.</li>
+  <li><strong>Deletion (individual):</strong> You can delete individual nodes from your knowledge graph at any time through the extension UI.</li>
+  <li><strong>Deletion (full account):</strong> You can request complete deletion of all your data by emailing <a href="mailto:tenthinlayofficial@gmail.com">tenthinlayofficial@gmail.com</a>. We will permanently delete all your data from our servers within 30 days.</li>
+  <li><strong>Data portability / export:</strong> You can request an export of your data by contacting us at the email above. (An in-app export feature is planned for a future release.)</li>
+  <li><strong>Opt out:</strong> You can stop using DeepTrail and uninstall the extension at any time. No data is collected while the extension is inactive.</li>
+  <li><strong>Rectification:</strong> If any data we hold about you is inaccurate, contact us and we will correct it.</li>
+</ul>
+
+<h3>Additional rights for EU/UK users (GDPR)</h3>
+<p>If you are located in the European Union or United Kingdom, you have additional rights under the General Data Protection Regulation (GDPR), including the right to access, rectification, erasure, restriction of processing, data portability, and the right to object to processing. Our legal basis for processing your data is your consent (you choose to save pages) and legitimate interest (providing the service you requested). To exercise any of these rights, contact us at <a href="mailto:tenthinlayofficial@gmail.com">tenthinlayofficial@gmail.com</a>. You also have the right to lodge a complaint with your local data protection authority.</p>
+
+<h3>Additional rights for California users (CCPA/CPRA)</h3>
+<p>If you are a California resident, you have the right to know what personal information we collect, to request deletion, and to opt out of the sale of personal information. We do not sell your personal information. To exercise your rights, contact us at <a href="mailto:tenthinlayofficial@gmail.com">tenthinlayofficial@gmail.com</a>.</p>
+
+<h2>9. Children's Privacy</h2>
+<p>DeepTrail is not directed at children under the age of 13 (or under 16 in the EU/UK). We do not knowingly collect personal data from children. If we learn that we have collected data from a child, we will delete it promptly. If you believe a child has provided us with their data, please contact us at <a href="mailto:tenthinlayofficial@gmail.com">tenthinlayofficial@gmail.com</a>.</p>
+
+<h2>10. Chrome Web Store Limited Use Compliance</h2>
+<div class="highlight-green">
+  The use of information received from Google APIs will adhere to the <a href="https://developer.chrome.com/docs/webstore/program-policies/limited-use" target="_blank">Chrome Web Store User Data Policy</a>, including the Limited Use requirements.
+</div>
+<p>Specifically:</p>
+<ul>
+  <li>We limit data use to providing and improving DeepTrail's single purpose: building a personal research knowledge graph.</li>
+  <li>We do not transfer user data to third parties except as described in Section 5, which is necessary to provide DeepTrail's core functionality.</li>
+  <li>We do not use or transfer user data for personalized advertisements.</li>
+  <li>We do not sell user data to data brokers or information resellers.</li>
+  <li>We do not use or transfer user data to determine creditworthiness or for lending purposes.</li>
+  <li>We do not allow humans to read user data, unless: (a) the user has given explicit consent (e.g., for account support or data deletion requests); (b) it is necessary for security purposes such as investigating abuse; (c) it is required to comply with applicable law; or (d) the data is aggregated and anonymized and used for internal operations.</li>
+</ul>
+
+<h2>11. Prominent Disclosure</h2>
+<p>DeepTrail's single purpose is to build a personal knowledge graph from web pages you save. To provide this functionality, the extension collects <strong>website content</strong> (text from pages you save) and <strong>web browsing activity</strong> (URLs and titles of pages you save). This data collection is required for the extension's core user-facing feature, which is prominently described in the Chrome Web Store listing and in the extension's user interface. Data is only collected when you actively use a DeepTrail feature (saving a page, searching). No data is collected passively or in the background.</p>
+
+<h2>12. Changes to This Policy</h2>
+<p>We may update this privacy policy from time to time. When we make changes, we will update the "Last updated" date at the top of this page. If we make material changes, we will notify you through the Chrome Web Store listing and/or within the extension. Continued use of DeepTrail after changes constitutes acceptance of the updated policy.</p>
+
+<h2>13. Contact Us</h2>
+<div class="contact-box">
+  <p>If you have questions about this privacy policy, want to exercise your data rights, or want to request data deletion, contact us:</p>
+  <p><strong>Email:</strong> <a href="mailto:tenthinlayofficial@gmail.com">tenthinlayofficial@gmail.com</a></p>
+  <p><strong>Developer:</strong> Tenzin Thinlay Bhutia</p>
+  <p><strong>Location:</strong> Kalimpong, West Bengal, India</p>
+  <p>We aim to respond to all privacy-related requests within 30 days.</p>
+</div>
+
+</div>
 </body>
 </html>
