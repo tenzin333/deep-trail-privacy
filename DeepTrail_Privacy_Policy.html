@@ -105,7 +105,7 @@
 <p class="subtitle">Effective date: April 15, 2026 &nbsp;|&nbsp; Last updated: April 15, 2026</p>
 
 <div class="highlight">
-  <strong>Summary:</strong> DeepTrail is a Chrome extension that helps you build a personal knowledge graph from web pages you choose to save. Your page content is sent to our backend server for AI processing (embedding and summarization), stored in our database, and never sold, shared for advertising, or used for any purpose beyond providing DeepTrail's core functionality. You can view, delete, or request export of your data at any time.
+  <strong>Summary:</strong> DeepTrail is a Chrome extension that helps you build a personal knowledge graph from web pages. You can save pages manually (click or keyboard shortcut) or enable an optional auto-save feature in Settings. Your page content is sent to our backend server for AI processing (embedding and summarization), stored in our database, and never sold, shared for advertising, or used for any purpose beyond providing DeepTrail's core functionality. You can view, delete, or request export of your data at any time.
 </div>
 
 <h2>1. Who We Are</h2>
@@ -116,13 +116,15 @@
 <p>This privacy policy applies to the DeepTrail Chrome extension (Item ID: <code>gbfhehbnondmcbjfbakjopooknchcglg</code>) and the associated backend services. If you have any questions about this policy or your data, contact us at the email above.</p>
 
 <h2>2. What Data We Collect</h2>
-<p>DeepTrail collects data only when you actively use the extension to save a page or perform a search. We categorize collected data as follows:</p>
+<p>DeepTrail collects data when you save a page (manually or via auto-save) or perform a search. We categorize collected data as follows:</p>
 
-<h3>2a. Data collected when you save a page</h3>
+<h3>2a. Data collected when you save a page (manual or auto-save)</h3>
 <ul>
-  <li><strong>Web page content (text):</strong> The text content extracted from web pages you explicitly choose to save to your knowledge graph. This is classified as "website content" under Chrome Web Store data types.</li>
+  <li><strong>Web page content (text):</strong> The text content extracted from web pages saved to your knowledge graph. This is classified as "website content" under Chrome Web Store data types.</li>
   <li><strong>Page metadata:</strong> The URL, page title, and timestamp of each saved page. Used for node identification, deduplication, and display.</li>
 </ul>
+<p><strong>Manual save:</strong> Pages are saved when you click the save button in the side panel or use the keyboard shortcut (Ctrl+Shift+S / Cmd+Shift+S).</p>
+<p><strong>Auto-save (opt-in):</strong> If you enable the "Auto-Save Pages" toggle in Settings, DeepTrail will automatically save pages as you browse. This feature is <strong>disabled by default</strong> and must be explicitly turned on by you. You can disable it at any time from Settings. Auto-save skips non-content pages (e.g., Google accounts, email, Chrome Web Store) and deduplicates recently saved URLs.</p>
 
 <h3>2b. Data collected when you search</h3>
 <ul>
@@ -138,15 +140,15 @@
 <h3>2d. Data stored locally on your device</h3>
 <ul>
   <li><strong>Authentication token:</strong> Stored in <code>chrome.storage.local</code>.</li>
-  <li><strong>Extension settings/preferences:</strong> Any user preferences are stored locally via <code>chrome.storage</code>.</li>
+  <li><strong>Extension settings/preferences:</strong> Including your auto-save toggle preference (on/off), stored locally via <code>chrome.storage</code>. These preferences are never sent to our servers.</li>
 </ul>
 
 <h2>3. What Data We Do NOT Collect</h2>
 <ul>
-  <li>We do <strong>not</strong> collect your general browsing history. We only process pages you explicitly save.</li>
+  <li>We do <strong>not</strong> collect your general browsing history. We only process pages you explicitly save (manually or via the opt-in auto-save feature).</li>
   <li>We do <strong>not</strong> collect passwords, form data, financial information, or health information.</li>
-  <li>We do <strong>not</strong> track your activity across websites.</li>
-  <li>We do <strong>not</strong> collect data when the extension is inactive or when you are not actively using a DeepTrail feature.</li>
+  <li>We do <strong>not</strong> track your activity across websites for advertising or profiling purposes.</li>
+  <li>We do <strong>not</strong> collect data when the extension is inactive and auto-save is disabled (the default state).</li>
   <li>We do <strong>not</strong> collect personally identifiable information beyond your email address (if you create an account).</li>
   <li>We do <strong>not</strong> collect your IP address for tracking purposes (though our hosting provider may log IP addresses in standard server logs as described in Section 6).</li>
   <li>We do <strong>not</strong> use cookies or any browser-based tracking technologies.</li>
@@ -266,13 +268,13 @@
   </tr>
   <tr>
     <td><code>activeTab</code></td>
-    <td>Access the content of the currently active tab when you click "Save" to add it to your knowledge graph</td>
-    <td>Text content and URL of the active tab, only when you trigger the save action</td>
+    <td>Access the content of the currently active tab when you click "Save" or use the keyboard shortcut (Ctrl+Shift+S) to add a page to your knowledge graph</td>
+    <td>Text content of the active tab, only when you explicitly trigger the save action</td>
   </tr>
   <tr>
     <td><code>tabs</code></td>
-    <td>Access the URL and title of the current tab to capture page metadata (source URL, page title) for knowledge graph nodes</td>
-    <td>URL and title of tabs — used only when saving a page to your knowledge graph</td>
+    <td>Access the URL and title of tabs to capture page metadata for knowledge graph nodes. Required for both manual save (identifying which page you are saving) and the optional auto-save feature (detecting completed page loads when auto-save is enabled).</td>
+    <td>URL and title of tabs — accessed when saving a page manually or automatically (if auto-save is enabled)</td>
   </tr>
   <tr>
     <td><code>storage</code></td>
@@ -283,11 +285,6 @@
     <td><code>sidePanel</code></td>
     <td>Display DeepTrail's knowledge graph UI in Chrome's side panel</td>
     <td>No data is accessed through this permission — it only enables the side panel UI</td>
-  </tr>
-  <tr>
-    <td><code>alarms</code></td>
-    <td>Schedule periodic background tasks such as token refresh or deferred processing. This permission does not access any user data — it only triggers timed events within the extension's service worker.</td>
-    <td>No user data is accessed through this permission</td>
   </tr>
 </table>
 
@@ -334,7 +331,9 @@
 </ul>
 
 <h2>11. Prominent Disclosure</h2>
-<p>DeepTrail's single purpose is to build a personal knowledge graph from web pages you save. To provide this functionality, the extension collects <strong>website content</strong> (text from pages you save) and <strong>web browsing activity</strong> (URLs and titles of pages you save). This data collection is required for the extension's core user-facing feature, which is prominently described in the Chrome Web Store listing and in the extension's user interface. Data is only collected when you actively use a DeepTrail feature (saving a page, searching). No data is collected passively or in the background.</p>
+<p>DeepTrail's single purpose is to build a personal knowledge graph from web pages you save. To provide this functionality, the extension collects <strong>website content</strong> (text from pages you save) and <strong>web browsing activity</strong> (URLs and titles of pages you save). This data collection is required for the extension's core user-facing feature, which is prominently described in the Chrome Web Store listing and in the extension's user interface.</p>
+<p><strong>Manual save (default):</strong> Data is collected only when you explicitly trigger a save via the side panel button or the Ctrl+Shift+S keyboard shortcut.</p>
+<p><strong>Auto-save (opt-in):</strong> If you enable the "Auto-Save Pages" toggle in the extension's Settings, DeepTrail will automatically save pages you visit to your knowledge graph. This feature is <strong>disabled by default</strong>. Enabling it constitutes your affirmative consent to the automatic collection of website content and browsing activity (URLs and titles) for pages you visit. You can revoke this consent at any time by disabling the toggle in Settings. Auto-save skips non-content pages such as email, authentication, and browser internal pages.</p>
 
 <h2>12. Changes to This Policy</h2>
 <p>We may update this privacy policy from time to time. When we make changes, we will update the "Last updated" date at the top of this page. If we make material changes, we will notify you through the Chrome Web Store listing and/or within the extension. Continued use of DeepTrail after changes constitutes acceptance of the updated policy.</p>
